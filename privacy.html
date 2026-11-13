@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>FinHandy — Confidențialitate</title><link rel="stylesheet" href="site.css"></head>
+<body><main>
+<header><a class="brand" href="privacy.html">FinHandy</a><nav aria-label="Documente"><a href="privacy.html" aria-current="page">Confidențialitate</a> · <a href="terms.html">Termeni de utilizare</a></nav></header>
+<h1>Politica de confidențialitate</h1>
+<p class="meta">Versiune pentru pilot personal · Actualizare: 13 noiembrie 2026</p>
+<p class="notice">Proiect pentru utilizare personală, în curs de validare. Documentul descrie varianta Android cu procesare pe telefon și conectare bancară directă. Nu reprezintă confirmarea disponibilității sau aprobării unei integrări bancare.</p>
+<h2>1. Scop și contact</h2>
+<p>FinHandy organizează istoricul financiar personal: conturi, tranzacții, clasificări și rapoarte. Înregistrarea bancară este administrată de titularul contului Enable Banking pentru propriile conturi eligibile. Aplicația nu este oferită publicului ca serviciu bancar.</p>
+<p>Pentru întrebări despre date: <a href="mailto:zbalexandru96@gmail.com">zbalexandru96@gmail.com</a>. Aceeași adresă trebuie indicată în înregistrarea aplicației la Enable Banking.</p>
+<h2>2. Date prelucrate</h2>
+<p>În funcție de datele importate sau autorizate, aplicația poate prelucra identificatori de cont, denumiri, monede, solduri observate, date și sume ale tranzacțiilor, descrieri, comercianți, categorii, surse și dovezi de import. Sunt păstrate și modificările și asocierile confirmate de utilizator.</p>
+<p>Modul demonstrativ folosește date sintetice. Acestea sunt separate de seiful personal; importul bancar este destinat seifului personal.</p>
+<h2>3. Stocare pe telefon și chei</h2>
+<p>Istoricul de lucru este păstrat într-un seif local criptat. Deblocarea folosește protecția Android. Cheia RSA a conectării bancare este generată pentru dispozitiv în Android Keystore; aplicația exportă certificatul public, nu cheia privată. Configurația și sesiunile bancare sunt criptate separat pe dispozitiv și nu sunt incluse în backupul financiar portabil.</p>
+<p>Varianta descrisă aici nu folosește un backend FinHandy găzduit pentru istoricul financiar. Aplicația nu include un serviciu propriu de reclame sau analiză comportamentală.</p>
+<h2>4. Banca și Enable Banking</h2>
+<p>Conectarea bancară, dacă este disponibilă și activată, implică banca și Enable Banking. Datele autorizate sunt transmise prin serviciile lor către aplicația de pe telefon; nu sunt prelucrate exclusiv pe telefon de-a lungul întregului traseu. Furnizorii aplică propriile informări și condiții.</p>
+<p>Utilizatorul autorizează accesul în fluxul băncii. FinHandy nu solicită introducerea parolei de internet banking în formularele sale. Disponibilitatea instituțiilor, conturilor și perioadelor istorice depinde de furnizori și de consimțământ.</p>
+<p>Oprirea accesului în FinHandy dezactivează sesiunea local și încearcă revocarea la furnizor. Confirmarea revocării depinde de rețea și de răspunsul furnizorului; solicitările temporar nereușite pot rămâne în coadă. Consimțămintele pot fi gestionate și prin bancă sau prin <a href="https://enablebanking.com/data-sharing-consents/">interfața Enable Banking</a>.</p>
+<h3>Revenirea HTTPS în aplicație</h3>
+<p>Varianta de pilot folosește un link HTTPS asociat aplicației prin Android App Links. Autorizarea este oprită dacă Android nu confirmă asocierea și gestionarea linkurilor. Acest flux necesită validare pe telefon și cu furnizorul bancar.</p>
+<p>Dacă browserul deschide pagina web de revenire în locul aplicației, cererea inițială către GitHub Pages poate include codul temporar de autorizare și parametrul de stare. Pagina de rezervă nu le afișează, nu schimbă codul pentru o sesiune bancară și nu transmite parametrii către alte site-uri. Un script local curăță adresa afișată când browserul permite aceasta; această curățare nu șterge o cerere deja ajunsă la găzduire. În această situație se corectează asocierea și se reia autorizarea. Nu se distribuie adresa completă sau codurile temporare.</p>
+<h2>5. Google Drive, opțional</h2>
+<p>Backupul Drive necesită o autorizare Google separată. Sunt verificate adresa de e-mail și identificatorul destinației Drive pentru a evita transferul către alt cont. Google prelucrează aceste operațiuni potrivit propriilor condiții.</p>
+<p>Containerul de backup este criptat AES-GCM pe telefon înainte de încărcare. Parola de recuperare nu este trimisă către Google și nu este salvată în jobul de upload. Drive păstrează fișierul criptat și metadatele necesare transferului. Backupul nu sincronizează sau combină modificările de pe două telefoane.</p>
+<h2>6. Cursuri și exporturi</h2>
+<p>Aplicația poate descărca automat cursuri publice ECB, cu cel mult o încercare pe zi locală. Cererea nu include conturile, tranzacțiile sau datele acestora. Furnizorul conexiunii poate vedea informațiile tehnice obișnuite ale unei solicitări de rețea.</p>
+<p>Exporturile CSV și PDF sunt rapoarte necriptate, create la cererea utilizatorului după informarea din aplicație. Ele pot conține informații financiare și trebuie păstrate și distribuite cu grijă. Nu sunt copii de recuperare ale seifului.</p>
+<h2>7. Păstrare, recuperare și ștergere</h2>
+<p>Datele locale sunt păstrate până când utilizatorul le înlocuiește prin operațiunile disponibile sau șterge datele aplicației. Ștergerea datelor ori dezinstalarea poate elimina cheile și accesul la istoricul local. Recuperarea necesită un backup portabil valid și parola lui. FinHandy nu oferă recuperarea unei parole uitate.</p>
+<p>Dezinstalarea nu revocă automat consimțămintele bancare și nu șterge copiile deja exportate ori încărcate în Drive. Acestea se gestionează separat. Pe un telefon nou, conectarea bancară necesită înregistrarea noii chei și reautorizare.</p>
+<h2>8. Conturi comune și limite</h2>
+<p>Perspectivele Eu / Partener / Comune sunt organizări locale ale conturilor. Nu acordă dreptul de acces la contul altei persoane și nu înlocuiesc consimțământul sau eligibilitatea cerute de bancă și de Enable Banking.</p>
+<p>Protecția datelor depinde și de securitatea telefonului, a contului Google și a copiilor păstrate de utilizator. Orice schimbare a traseului datelor sau introducerea unui serviciu nou necesită actualizarea acestei informări.</p>
+<h2>9. Accesarea acestor pagini</h2>
+<p>Aceste pagini de informare sunt pregătite pentru găzduire prin GitHub Pages. GitHub poate înregistra adresa IP a vizitatorului în scopuri de securitate, conform <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">politicii sale de confidențialitate</a>. Paginile nu includ formulare, reclame, analytics sau cod JavaScript propriu. Accesarea lor nu transmite istoricul financiar din FinHandy către GitHub.</p>
+<footer><a href="terms.html">Termeni de utilizare</a></footer>
+</main></body></html>
