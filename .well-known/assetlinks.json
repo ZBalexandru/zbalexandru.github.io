@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ro.finantelocal.app",
+      "sha256_cert_fingerprints": [
+        "EE:44:DB:F8:62:3A:4E:6F:38:86:73:E8:D4:AA:C3:6D:E3:3C:0F:C3:5C:25:E3:51:5A:69:ED:5D:1B:78:4A:A7"
+      ]
+    }
+  }
+]
